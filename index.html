@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Doorstep Courier Pickup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Atlas Logistic Enterprises</div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Service Coverage</a></li>
+        <li><a href="#message">Quick Enquiry</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Atlas Logistic Enterprises</h2>
+      <h3 style="text-align: center;">Delivering Trust, One Parcel at a time</h3>
+      <p style="text-align: center;">A trusted logistics partner offering domestic and international courier, surface cargo, and global freight services, Atlas Logistech Enterprises connects customers to every destination with speed, reliability, and care</p>
+        <ul class="clean-list">
+          <li>Fast Delivery</li>
+          <li>Secure Packaging</li>
+          <li>Affordable Rates</li>
+          <li>World wide Service</li>
+          <li>24/7 Customer Support</li>
+        </ul>
+    </section>
+
+    <section id="about">
+      <h2>Easy and simple steps</h2>
+      <div class="steps">
+        <div class="step">
+          <h2>Step 1</h2>
+          <h3>Book our service and schedule the pickup at your convenient time</h3>
+          <p>Visit our website or WhatsApp to book your pickup</p>
+          <img src="step_1.png" alt="Step 1 Image" />
+        </div>
+        <div class="step">
+          <h2>Step 2</h2>
+          <h3>We pick up your package from your location</h3>
+          <p>Our pickup executive will arrive at the scheduled time to collect your package from your doorstep</p>
+          <img src="step_2.png" alt="Step 2 Image" />
+        </div>
+        <div class="step">
+          <h2>Step 3</h2>
+          <h3>Pay through convenient online payment mode</h3>
+          <p>Payment can be done through multiple online payment methods including Google Pay, Paytm, PhonePe, Netbanking - NEFT</p>
+          <img src="step_3.avif" alt="Step 3 Image" />
+        </div>
+        <div class="step">
+          <h2>Step 4</h2>
+          <h3>Package delivered to the recipient</h3>
+          <p>Our delivery executive will ensure your package is safely delivered to the recipient's doorstep</p>
+          <img src="step_4.webp" alt="Step 4 Image" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <h3>Connecting shipments with certainty - from origin to destination</h3>
+      <ul class="clean-list">
+        <li>Domestic & International Courier Services</li>
+        <li>Surface Cargo & Air Cargo Solutions</li>
+        <li>Door-to-Door Delivery & Doorstep Pickup</li>
+        <li>E-commerce logistics & Reverse logistics</li>
+        <li>Corporate Freight & Full Truck Load Solutions</li>
+        <li>Special handling for bulk cargo & commercial shipments</li>
+      </ul>
+    </section>
+
+    <section id="message">
+      <h2>Quick Enquiry</h2>
+      <form class="message-form" action="mailto:example@example.com" method="post" enctype="text/plain">
+        <label for="userMailID">Email ID</label>
+        <input type="email" id="userMailID" name="mailId" placeholder="Email ID"></input>
+        <label for="userMessage">Query</label>
+        <textarea id="userMessage" name="message" rows="5" placeholder="Type your query here..."></textarea>
+        <button type="submit" class="primary-btn">Send Email</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-tile">
+        <p class="contact-item"><span class="contact-icon" aria-hidden="true">📞</span>+919944112358</p>
+        <p class="contact-item"><span class="contact-icon" aria-hidden="true">✉️</span>operations@atlaslogistech.com</p>
+        <p class="contact-item"><span class="contact-icon" aria-hidden="true">📍</span>No 1, First Street, Narasingapuram, Guindy, Chennai - 600032</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
