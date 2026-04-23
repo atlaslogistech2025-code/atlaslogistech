@@ -7,66 +7,54 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- <header>
-    <div class="logo">Atlas Logistic Enterprises</div>
-
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav id="navMenu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Service Coverage</a></li>
-        <li><a href="#message">Quick Enquiry</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header> -->
 
   <main>
-    <div class="intro-section" width="100%" style="padding: 4rem 2rem; text-align: center; color: #f8fbff; margin-bottom: 2rem; margin: 0;">
-      <strong>
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+    <header>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-          <nav id="navMenu">
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#why-choose-us">Why choose us?</a></li>
-              <li><a href="#business">Business</a></li>
-              <li><a href="#how-it-works">How it works?</a></li>
-              <li><a href="#updates">Updates</a></li>
-              <li><a href="#message">Quick Enquiry</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-        <header>
-          <div class="logo"><img src="logo.jpeg" alt="Atlas Logistic Enterprises Logo" style="width: 3cm; border-radius: 3cm;">Atlas Logistic Enterprises</div>        
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-choose-us">Why choose us?</a></li>
+          <li><a href="#business">Business</a></li>
+          <li><a href="#how-it-works">How it works?</a></li>
+          <li><a href="#updates">Updates</a></li>
+          <li><a href="#message">Quick Enquiry</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="intro-section">
+      <strong style="text-align: center; color: #f8fbff; display: flex; flex-direction: column; align-items: center; gap: 2rem; max-width: 90%;">
+        <img src="logo-nobg2.png" alt="Atlas Logistech Enterprises Logo" style="width: clamp(60px, 15vw, 200px); flex-shrink: 0;">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <!-- <img src="logo-nobg2.png" alt="Atlas Logistech Enterprises Logo" style="width: clamp(60px, 10vw, 200px); flex-shrink: 0;"> -->
+          <div style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 700; letter-spacing: 0.04em; font-family: 'Montserrat', sans-serif;">ATLAS LOGISTECH<br>ENTERPRISES</div>
+        </div>
         
-        
-        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; text-align: left; font-family: 'Outfit', sans-serif; margin: 0 auto;">
+        <div style="font-size: clamp(1.5rem, 5vw, 2.5rem); font-weight: bold; text-align: center; font-family: 'Outfit', sans-serif;">
           Flexible<span style="color: #dc2626;">,</span>
           <br>Reliable<span style="color: #dc2626;">,</span>
           <br>Affordable<span style="color: #dc2626;">,</span>
-          <span style="font-size: 2.5rem; font-weight: lighter; font-family: 'Outfit', sans-serif;"><br>Your Ultimate Courier Solution<span style="color: #dc2626;">!</span></span>
+          <br><span style="font-weight: lighter;">Your Ultimate Courier Solution<span style="color: #dc2626;">!</span></span>
         </div>
       </strong>
     </div>
     <section id="about">
       <br>
-      <h2>Welcome to Atlas Logistic Enterprises</h2>
+      <h2>Welcome to Atlas Logistech Enterprises</h2>
       <p style="text-align: center;">We are a Chennai-based courier and logistics company with over 1 year of proven service excellence. In a short time, we have built a strong reputation for reliability, speed, and customer satisfaction.
         We specialize in handling shipments of all sizes — from small parcels to bulk cargo — ensuring safe and timely delivery across domestic and international locations.</p>
       <br>
@@ -84,33 +72,34 @@
     <br>
     <section id="services">
       <h2>Our services</h2>
-      <div class="steps">
-        <div class="step">
+      <div class="services-tiles">
+        <div class="services-tile">
           <h2>Home Pickup</h2>
           <h3>Convenient doorstep pickup service across Chennai and nearby areas. No need to step out - we come to you.</h3>
-          <!-- <img src="home_pickup_icon.jpeg" alt="Home Pickup Icon" class="tile-icon"> -->
+          <img src="home.png" alt="Home Pickup Icon" class="tile-icon">
         </div>
-        <div class="step">
+        <div class="services-tile">
           <h2>Domestic Courier</h2>
           <h3>Fast and secure delivery across India with reliable tracking and timely service.</h3>
-          <!-- <img src="domestic_courier_icon.jpeg" alt="Domestic Courier Icon" class="tile-icon"> -->
+          <br>
+          <img src="loctime.png" alt="Domestic Courier Icon" class="tile-icon">
         </div>
-        <div class="step">
+        <div class="services-tile">
           <h2>International Shipping</h2>
           <h3>Seamless global shipping with customs handling support and competitive pricing.</h3>
-          <!-- <img src="international_shipping_icon.jpeg" alt="International Shipping Icon" class="tile-icon"> -->
+          <img src="plane.png" alt="International Shipping Icon" class="tile-icon">
         </div>
-        <div class="step">
+        <div class="services-tile">
           <h2>Logistics & Transportation</h2>
           <h3>End-to-end logistics solutions for businesses, including bulk movement and supply chain support.</h3>
-          <!-- <img src="logistics_transportation_icon.jpeg" alt="Logistics & Transportation Icon" class="tile-icon"> -->
+          <img src="truck.png" alt="Logistics & Transportation Icon" class="tile-icon">
         </div>
-        <div class="step">
+        <div class="services-tile">
           <h2>Packaging Solutions</h2>
           <h3>Professional packing to ensure safety of fragile, valuable, and high-volume shipment</h3>
-          <!-- <img src="packaging_solutions_icon.jpeg" alt="Packaging Solutions Icon" class="tile-icon"> -->
+          <img src="package.png" alt="Packaging Solutions Icon" class="tile-icon">
         </div>
-        <div class="step">
+        <div class="services-tile">
           <h2>Business & Corporate Service</h2>
           <h3>Customized courier and logistics solutions for companies, including:</h3>
           <ul class="clean-list">
@@ -118,7 +107,7 @@
             <li>Bulk order movement</li>
             <li>Dedicated support</li>
         </div>
-        <div class="step">
+        <div class="services-tile">
           <h2>Any Type of Shipment</h2>
           <h3>We handle all types of cargo:</h3>
           <ul class="clean-list">
@@ -162,19 +151,23 @@
       <h2>How it works</h2>
       <div class="steps">
         <div class="step">
-          <h2>1.</h2>
+          <!-- <h2>1.</h2> -->
+          <img src="calander.png" alt="Packaging Solutions Icon" class="tile-icon">
           <h3>Book your pickup</h3>
         </div>
         <div class="step">
-          <h2>2.</h2>
+          <!-- <h2>2.</h2> -->
+          <img src="loc.png" alt="Packaging Solutions Icon" class="tile-icon">
           <h3>We collect from your location</h3>
         </div>
         <div class="step">
-          <h2>3.</h2>
+          <!-- <h2>3.</h2> -->
+           <img src="truck.png" alt="Packaging Solutions Icon" class="tile-icon">
           <h3>Shipment is processed and dispatched</h3>
         </div>
         <div class="step">
-          <h2>4.</h2>
+          <!-- <h2>4.</h2> -->
+          <img src="time.png" alt="Packaging Solutions Icon" class="tile-icon">
           <h3>Safe and timely delivery</h3>
         </div>
       </div>
@@ -193,8 +186,18 @@
     <section id="message">
       <h2>Quick Enquiry</h2>
       <form class="message-form" action="mailto:example@example.com" method="post" enctype="text/plain">
-        <label for="userMailID">Email ID</label>
-        <input type="email" id="userMailID" name="mailId" placeholder="Email ID"></input>
+        <label for="userMailID">Phone Number</label>
+        <select>
+          <option value="+91">+91</option>
+        </select>
+
+        <input 
+          type="tel" 
+          placeholder="Phone Number"
+          pattern="[6-9]\d{9}"
+          maxlength="10"
+          id="phno" name="phno"
+          required>
         <label for="userMessage">Query</label>
         <textarea id="userMessage" name="message" rows="5" placeholder="Type your query here..."></textarea>
         <button type="submit" class="primary-btn">Send Email</button>
@@ -203,10 +206,22 @@
     <br>
     <section id="contact">
       <h2>Contact</h2>
-      <div class="contact-tile">
-        <p class="contact-item"><span class="contact-icon" aria-hidden="true">📞</span>+919944112358</p>
-        <p class="contact-item"><span class="contact-icon" aria-hidden="true">✉️</span>operations@atlaslogistech.com</p>
-        <p class="contact-item"><span class="contact-icon" aria-hidden="true">📍</span>No 1, First Street, Narasingapuram, Guindy, Chennai - 600032</p>
+      <div class="contact-container">
+        <div class="contact-card">
+          <div class="contact-icon-box">📞</div>
+          <!-- <h3>Phone</h3> -->
+          <p><a href="tel:+919944112358">+91 9944 112358</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon-box">✉️</div>
+          <!-- <h3>Email</h3> -->
+          <p><a href="mailto:operations@atlaslogistech.com">operations@atlaslogistech.com</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon-box">📍</div>
+          <!-- <h3>Address</h3> -->
+          <p>No 1, First Street, Narasingapuram, Guindy, Chennai - 600032</p>
+        </div>
       </div>
     </section>
   </main>
