@@ -704,7 +704,7 @@ img{
   }
 }
 
-.whatsapp-float {
+/* .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -725,4 +725,33 @@ img{
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+} */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #25D366;
+  color: white;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999; /* ensure it's on top */
+}
+
+/* 👇 Mobile optimization */
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 12px;
+    right: 12px;
+  }
 }
