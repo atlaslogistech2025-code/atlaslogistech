@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Online Doorstep Courier Pickup</title>
+  <link rel="icon" type="image/png" href="logo.jpeg">
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
@@ -185,9 +186,19 @@
     </section>
     <section id="message">
       <h2>Quick Enquiry</h2>
-      <form class="message-form" action="mailto:example@example.com" method="post" enctype="text/plain">
-        <label for="userMailID">Phone Number</label>
-        <select>
+
+      <form class="message-form" id="contactForm">
+        <label>Name</label>
+        <input 
+          type="text" 
+          placeholder="Your Name" 
+          id="name" 
+          name="name" 
+          required>
+        
+        <label>Phone Number</label>
+
+        <select id="countryCode">
           <option value="+91">+91</option>
         </select>
 
@@ -196,10 +207,19 @@
           placeholder="Phone Number"
           pattern="[6-9]\d{9}"
           maxlength="10"
-          id="phno" name="phno"
+          id="phno" 
+          name="phno"
           required>
-        <label for="userMessage">Query</label>
-        <textarea id="userMessage" name="message" rows="5" placeholder="Type your query here..."></textarea>
+
+        <label>Query</label>
+        <textarea 
+          id="userMessage" 
+          name="message" 
+          rows="5" 
+          placeholder="Type your query here..."
+          required>
+        </textarea>
+
         <button type="submit" class="primary-btn">Send Email</button>
       </form>
     </section>
@@ -235,4 +255,55 @@
     });
   </script>
 </body>
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("HerW1yjsHOsmEDuQ0"); 
+  })();
+
+  // Handle form submit
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page reload
+
+    const button = this.querySelector("button");
+    button.disabled = true;
+    button.innerText = "Sending...";
+
+    const countryCode = document.getElementById("countryCode").value;
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phno").value;
+    const message = document.getElementById("userMessage").value;
+
+    // Basic validation
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+      alert("Enter a valid Indian phone number");
+      button.disabled = false;
+      button.innerText = "Send Email";
+      return;
+    }
+
+    const params = {
+      name: name,
+      phone: countryCode + " " + phone,
+      message: message
+    };
+
+    emailjs
+      .send("service_atlaslogistech", "template_1wpk5dn", params) 
+      .then(function () {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      })
+      .catch(function (error) {
+        console.error(error);
+        alert("Failed to send message");
+      })
+      .finally(function () {
+        button.disabled = false;
+        button.innerText = "Send Email";
+      });
+  });
+</script>
 </html>
